@@ -1,0 +1,22 @@
+{
+  "name": "jest-github-actions-reporter",
+  "version": "1.0.0",
+  "description": "Reporter for Jest that outputs GitHub Actions annotations",
+  "main": "dist/index.js",
+  "scripts": {
+    "watch": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
+  "author": "cschleiden",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.8",
+    "typescript": "^3.7.2"
+  }
+}
