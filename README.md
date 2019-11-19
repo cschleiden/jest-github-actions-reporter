@@ -10,7 +10,7 @@ A custom Jest reporter to create annotations when run via GitHub Actions.
 All you have to do to get annotations in your GitHub Actions runs is to add the reporter your Jest configuration.
 
 1. Install `npm install -D jest-github-actions-reporter`
-2. Add to your configuration `jest.config.js`:
+2. Add to your `jest.config.js`:
 ```js
 module.exports = {
   reporters: [
@@ -20,10 +20,7 @@ module.exports = {
   testLocationInResults: true
 };
 ```
-
-alternatively you can only add it during your CI build:
-
-`package.json`
+alternatively you can only add it during your CI build, for example in `package.json`:
 ```json
 {
     ...
@@ -34,6 +31,36 @@ alternatively you can only add it during your CI build:
 ```
 
 nothing else is required, no token sharing, no REST API calls etc. 
+
+## Example
+
+`.github/workflows/CI.yaml`
+
+```yaml
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm citest
+      env:
+        CI: true
+```
 
 ## How does this work?
 
