@@ -7,9 +7,10 @@ A custom Jest reporter to create annotations when run via GitHub Actions.
 
 ## Usage
 
-All you have to do to get annotations in your GitHub Actions runs is to add the reporter 
+All you have to do to get annotations in your GitHub Actions runs is to add the reporter your Jest configuration.
 
-`jest.config.js`:
+1. Install `npm install -D jest-github-actions-reporter`
+2. Add to your configuration `jest.config.js`:
 ```js
 module.exports = {
   reporters: [
