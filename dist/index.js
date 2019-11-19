@@ -9,7 +9,6 @@ class GitHubActionsReporter {
     onTestStart(test) { }
     onTestResult(test, testResult, results) { }
     onRunComplete(contexts, results) {
-        command_1.issue("group", "JEST result");
         if (results.numFailedTests > 0) {
             for (const testResults of results.testResults.filter(x => x.numFailingTests > 0)) {
                 for (const testResult of testResults.testResults) {
@@ -27,7 +26,6 @@ class GitHubActionsReporter {
                 }
             }
         }
-        command_1.issue("endgroup");
     }
 }
 module.exports = GitHubActionsReporter;

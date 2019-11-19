@@ -1,4 +1,4 @@
-import { issueCommand, issue } from "@actions/core/lib/command";
+import { issueCommand } from "@actions/core/lib/command";
 
 class GitHubActionsReporter implements jest.Reporter {
   constructor(public globalConfig: jest.GlobalConfig, private options: any) {}
@@ -15,7 +15,6 @@ class GitHubActionsReporter implements jest.Reporter {
     contexts: Set<jest.Context>,
     results: jest.AggregatedResult
   ) {
-    issue("group", "JEST result");
     if (results.numFailedTests > 0) {
       for (const testResults of results.testResults.filter(
         x => x.numFailingTests > 0
@@ -39,8 +38,6 @@ class GitHubActionsReporter implements jest.Reporter {
         }
       }
     }
-
-    issue("endgroup");
   }
 }
 

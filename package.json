@@ -1,6 +1,6 @@
 {
   "name": "jest-github-actions-reporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reporter for Jest that outputs GitHub Actions annotations",
   "main": "dist/index.js",
   "scripts": {
