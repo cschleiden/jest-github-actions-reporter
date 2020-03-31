@@ -64,4 +64,4 @@ jobs:
 
 ## How does this work?
 
-GitHub Actions supports a number of commands that allow you to provide rich experiences without custom REST API calls etc. See the [docs](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/development-tools-for-github-actions#set-an-error-message-error) for more information.
+GitHub Actions supports a number of commands that allow you to provide rich experiences without custom REST API calls etc. See the [docs](https://help.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-an-error-message) for more information.
