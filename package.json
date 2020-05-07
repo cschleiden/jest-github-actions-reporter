@@ -14,6 +14,10 @@
   "dependencies": {
     "@actions/core": "^1.2.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cschleiden/jest-github-actions-reporter"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.8",
