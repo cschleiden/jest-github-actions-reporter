@@ -21,9 +21,9 @@ module.exports = {
 };
 ```
 alternatively you can only add it during your CI build, for example in `package.json`:
-```json
+```jsonc
 {
-    ...
+    // ...
     "scripts": {
         "citest": "CI=true jest --reporters=default --reporters=jest-github-actions-reporter"
     }
