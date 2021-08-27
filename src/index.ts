@@ -15,6 +15,10 @@ class GitHubActionsReporter implements jest.Reporter {
     contexts: Set<jest.Context>,
     results: jest.AggregatedResult
   ) {
+    if (process.env.GITHUB_ACTIONS !== 'true') {
+      return;
+    }
+      
     issue("group", "Jest Annotations");
 
     if (results.numFailedTests > 0) {
