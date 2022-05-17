@@ -1,3 +1,7 @@
+# Update 2022-05-17:
+
+With version [28](https://jestjs.io/blog/2022/04/25/jest-28) Jest now includes a native GitHub Actions reporter. This repository and package won't go away, but I recommend switching over to the official reporter. The [blog post](https://jestjs.io/blog/2022/04/25/jest-28#github-actions-reporter) has some pointers on how to set this up. 
+
 # Jest Reporter for GitHub Actions
 
 A custom Jest reporter to create annotations when run via GitHub Actions. 
